@@ -1,0 +1,2 @@
+# KingOfTheHill
+KOTH Minecraft Plugin
