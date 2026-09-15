@@ -1,0 +1,16 @@
+# ============================================
+#   KingOfTheHill - Configuration
+# ============================================
+
+defaults:
+  capture-seconds: 30
+  reward-material: DIAMOND
+  reward-amount: 5
+  welcome-message: "&aوارد King of the Hill شدی!"
+
+particles:
+  enabled: true
+  type: FLAME
+  amount: 5
+
+arenas: {}
