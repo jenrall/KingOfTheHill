@@ -1,0 +1,17 @@
+name: KingOfTheHill
+version: 1.0.0
+main: com.example.koth.KingOfTheHill
+api-version: '1.21'
+author: You
+description: King of the Hill minigame with arena config
+commands:
+  koth:
+    description: King of the Hill commands
+    usage: /koth <help|join|leave|start|stop|create|delete|list|pos1|pos2|setcenter|setreward|setduration|reload>
+    permission: koth.use
+    permission-message: "شما دسترسی به این دستور ندارید."
+permissions:
+  koth.use:
+    default: true
+  koth.admin:
+    default: op
