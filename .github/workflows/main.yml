@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,9 +23,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean package --batch-mode
 
-      - name: Upload JAR
-        uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: KingOfTheHill-JAR
-          path: target/*.jar
-          retention-days: 30
+          tag_name: v1.0.${{ github.run_number }}
+          name: Release v1.0.${{ github.run_number }}
+          files: target/*.jar
+          draft: false
+          prerelease: false
